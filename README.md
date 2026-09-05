@@ -489,7 +489,6 @@ It does **not** prove that medium discounts cause higher engagement.
 
 ## Price Performance Analysis
 
-  |----------------------------------------------------------------------------|
   |Price  Category | Products | Avg Current Price  |Avg Discount |Avg Reviews | Avg Rating |                                               
   | ----------- | ------------ |------------| ------------| ------------| ------------|
   | Low Price       |      28  | KSh 284.75   |       48%      |     17   |     3.64   |
@@ -824,9 +823,8 @@ Two source price ranges were converted to midpoints to make them analytically us
 
 The Excel workbook is organized into six main sheets.
 
-  -----------------------------------------------------------------------
  | Sheet                    |           Purpose           |
- | ----------------------------------- | ----------------------------------- |
+ |-----------------------------------|-----------------------------------|
  | `Raw_Data`              |            Original source data retained for auditability    |
 
  | `Cleaned_Data`          |          Cleaned analytical table (`tblProducts`) and enrichment fields    |
@@ -838,7 +836,6 @@ The Excel workbook is organized into six main sheets.
  | `Dashboard`             |          Interactive KPI cards, charts, slicers, insights, and recommendations     |
 
  | `Data_Dictionary`       |         Data-quality audit, cleaning log, field definitions, assumptions, and thresholds     |
-  -----------------------------------------------------------------------
 
 ------------------------------------------------------------------------
 
