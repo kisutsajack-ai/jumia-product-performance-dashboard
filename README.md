@@ -700,22 +700,6 @@ The KPI cards also represent the overall dataset.
 
 ------------------------------------------------------------------------
 
-## Dashboard Preview
-
-Add your exported dashboard screenshot to the repository at:
-
-``` text
-images/dashboard.png
-```
-
-Then use:
-
-``` md
-![Jumia Product Performance Dashboard](images/dashboard.png)
-```
-
-------------------------------------------------------------------------
-
 # Key Findings and Business Insights
 
 Each finding is presented using **Evidence → Meaning → Action → Caveat**.
