@@ -8,6 +8,12 @@ The final dashboard focuses on **product pricing, discounts, customer ratings an
 
 ------------------------------------------------------------------------
 
+## Dashboard Preview
+
+![Jumia Product Performance Dashboard](images/dashboard.png)
+
+------------------------------------------------------------------------
+
 ## Project Objective
 
 The objective of this project was to transform a raw Jumia product dataset into a clean, structured and interactive Excel analysis that can answer practical business questions such as:
