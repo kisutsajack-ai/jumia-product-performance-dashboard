@@ -826,16 +826,11 @@ The Excel workbook is organized into six main sheets.
  | Sheet                    |           Purpose           |
  |-----------------------------------|-----------------------------------|
  | `Raw_Data`              |            Original source data retained for auditability    |
-
  | `Cleaned_Data`          |          Cleaned analytical table (`tblProducts`) and enrichment fields    |
-
  | `Analysis`              |           Descriptive statistics, thresholds, category summaries, correlation and performance flags  |
-
  | `Pivot_Tables`          |             PivotTables supporting detailed analysis and dashboard charts   |
-
  | `Dashboard`             |          Interactive KPI cards, charts, slicers, insights, and recommendations     |
-
- | `Data_Dictionary`       |         Data-quality audit, cleaning log, field definitions, assumptions, and thresholds     |
+ | `Data_Dictionary`       |         Data-quality audit, cleaning log, field definitions, assumptions and thresholds     |
 
 ------------------------------------------------------------------------
 
