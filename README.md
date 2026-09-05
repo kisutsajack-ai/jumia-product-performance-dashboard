@@ -2,15 +2,15 @@
 
 ## Excel E-commerce Product Analysis Project
 
-This project demonstrates an end-to-end **Excel data analytics workflow** using a Jumia product dataset. The project moves from raw data auditing and cleaning through analytical enrichment, PivotTable analysis, visualization, and an interactive Excel dashboard.
+This project demonstrates an end-to-end **Excel data analytics workflow** using a Jumia product dataset. The project moves from raw data auditing and cleaning through analytical enrichment, PivotTable analysis, visualization and an interactive Excel dashboard.
 
-The final dashboard focuses on **product pricing, discounts, customer ratings, and review engagement** and is designed to help a seller or e-commerce analyst quickly identify patterns, potential promotional opportunities, and products that may require further investigation.
+The final dashboard focuses on **product pricing, discounts, customer ratings and review engagement** and is designed to help a seller or e-commerce analyst quickly identify patterns, potential promotional opportunities and products that may require further investigation.
 
 ------------------------------------------------------------------------
 
 ## Project Objective
 
-The objective of this project was to transform a raw Jumia product dataset into a clean, structured, and interactive Excel analysis that can answer practical business questions such as:
+The objective of this project was to transform a raw Jumia product dataset into a clean, structured and interactive Excel analysis that can answer practical business questions such as:
 
 -   How do discount levels relate to customer review engagement?
 -   Do higher-priced products receive better customer ratings?
@@ -95,7 +95,7 @@ The analysis was designed around the following questions:
 
 ## Initial Data-quality Audit
 
-Before performing analysis, the dataset was profiled in Power Query using **Column Quality, Column Distribution, and Column Profile**.
+Before performing analysis, the dataset was profiled in Power Query using **Column Quality, Column Distribution and Column Profile**.
  
 The audit identified the following:
 
@@ -210,7 +210,7 @@ The original `Ratingd` field contained text such as:
 4.5 out of 5
 ```
 
-The column was renamed to `Rating`, the text `out of 5` was removed, and the result was converted to a decimal number.
+The column was renamed to `Rating`, the text `out of 5` was removed and the result was converted to a decimal number.
 
 The final valid rating range was:
 
@@ -247,7 +247,7 @@ Products were **not** deduplicated by product name alone.
 
 ### 8. Data Status
 
-A `Data Status` field was added to distinguish complete and incomplete customer-feedback records.
+A `Data Status` field was added to distinguish complete and incomplete customer feedback records.
  
 ``` excel
 =IF(AND(Review="",Rating=""),"Missing review & rating",...)
@@ -426,8 +426,7 @@ Three independent performance flags were created.
 =IF(AND([@[Discount Category]]="High Discount",[@[Rating Category]]="Excellent"),"Yes","No")
 ```
 
-These are independent screening flags, so their totals should not
-automatically be added together as unique products.
+These are independent screening flags, so their totals should not automatically be added together as unique products.
 
 ------------------------------------------------------------------------
 
@@ -453,7 +452,7 @@ The analysis included:
 =COUNT(...)
 ```
 
-Because Review and Rating contain missing values, their valid numeric count was **57**, while Current Price, Old Price, and Discount contained **112** valid observations.
+Because Review and Rating contain missing values, their valid numeric count was **57** while Current Price, Old Price and Discount contained **112** valid observations.
 
 ------------------------------------------------------------------------
 
@@ -480,7 +479,7 @@ Because Review and Rating contain missing values, their valid numeric count was 
 
 ### Interpretation
 
-Medium-discount products recorded the highest average Review count at **15**, compared with **11** for high-discount products and **10** for low-discount products.
+Medium-discount products recorded the highest average Review count at **15** compared with **11** for high-discount products and **10** for low-discount products.
 
 This means that deeper discounts were **not associated with the highest observed engagement** in this dataset.
 
@@ -502,7 +501,7 @@ It does **not** prove that medium discounts cause higher engagement.
 
 ### Interpretation
 
-Low-priced products had the highest average review engagement, while high-priced products had the highest average rating and the lowest average discount.
+Low-priced products had the highest average review engagement while high-priced products had the highest average rating and the lowest average discount.
 
 Average Rating increased across the price categories:
 
@@ -718,7 +717,7 @@ Each finding is presented using **Evidence → Meaning → Action → Caveat**.
 
 ## 1. Medium Discounts Showed the Highest Average Review Engagement
 
-**Evidence:** Medium-discount products averaged **15 reviews**, compared with **11 reviews** for high-discount products and **10 reviews** for low-discount products.
+**Evidence:** Medium-discount products averaged **15 reviews** compared with **11 reviews** for high-discount products and **10 reviews** for low-discount products.
 
 **Meaning:** The deepest discounts were not associated with the strongest review engagement.
 
@@ -764,7 +763,7 @@ Each finding is presented using **Evidence → Meaning → Action → Caveat**.
 
 **Action:** Investigate the 6 high-rating/high-engagement products as possible promotional candidates and review product quality or listing issues among the 10 high discount/low-rating products before increasing promotional support.
 
-**Caveat:** These flags are screening tools rather than proof of commercial performance because the dataset contains no revenue, units sold, margin, or profitability information.
+**Caveat:** These flags are screening tools rather than proof of commercial performance because the dataset contains no revenue, units sold, margin or profitability information.
 
 ------------------------------------------------------------------------
 
@@ -778,12 +777,11 @@ Medium-discount products showed the strongest average Review count. Sellers shou
 
 ### Investigate Stronger-rated High-price Products
 
-High-price products achieved the strongest average Rating. Their product characteristics, brands, quality, and listing presentation can be investigated to understand what may contribute to positive customer feedback.
+High-price products achieved the strongest average Rating. Their product characteristics, brands, quality and listing presentation can be investigated to understand what may contribute to positive customer feedback.
 
 ### Use Rating and Engagement Together
 
-Because Rating and Review count had almost no linear correlation, neither metric should be used alone as a complete measure of product
-performance.
+Because Rating and Review count had almost no linear correlation, neither metric should be used alone as a complete measure of product performance.
 
 ### Review High-discount / Low-rating Products
 
@@ -867,7 +865,7 @@ workbook/Jumia_Product_Performance_Dashboard.xlsx
 
 3.  If Excel displays a security or external-content warning, review the workbook and enable the required content only if you trust the downloaded repository.
 4.  Open the `Dashboard` sheet for the main interactive view.
-5.  Use the **Rating Category**, **Price Category**, and **Discount Category** slicers to explore product segments.
+5.  Use the **Rating Category**, **Price Category** and **Discount Category** slicers to explore product segments.
 6.  Use the slicer's **Clear Filter** button to return to the overall view.
 7.  Open `Analysis` to review the supporting calculations and thresholds.
 8.  Open `Pivot_Tables` to inspect the PivotTables behind the dashboard charts.
@@ -881,7 +879,7 @@ If the workbook needs refreshing, use:
 Data → Refresh All
 ```
 
-After refreshing, confirm that PivotTables, charts, and slicers still display correctly.
+After refreshing, confirm that PivotTables, charts and slicers still display correctly.
 
 ------------------------------------------------------------------------
 
@@ -915,13 +913,13 @@ This project demonstrates practical skills in:
 
 A major lesson from this project was that dashboard quality depends on the work completed **before** visualization.
 
-Cleaning decisions such as handling negative Review values, converting price ranges, retaining missing values as blanks, and correctly defining duplicates directly affect the reliability of the final analysis.
+Cleaning decisions such as handling negative Review values, converting price ranges, retaining missing values as blanks and correctly defining duplicates directly affect the reliability of the final analysis.
 
 The project also reinforced that analytical categories need clearly documented rules. The Price Category and Engagement Flag were based on calculated dataset thresholds rather than arbitrary labels.
 
-Another important lesson was the difference between **correlation and causation**. A dashboard can show that two measures move together---or do not---but that alone does not explain why.
+Another important lesson was the difference between **correlation and causation**. A dashboard can show that two measures move together or do not but that alone does not explain why.
 
-Finally, I learned that a useful dashboard should not contain every calculation. Detailed calculations and PivotTables belong in supporting sheets, while the dashboard should communicate the most important KPIs, comparisons, filters, and insights clearly.
+Finally, I learned that a useful dashboard should not contain every calculation. Detailed calculations and PivotTables belong in supporting sheets, while the dashboard should communicate the most important KPIs, comparisons, filters and insights clearly.
 
 ------------------------------------------------------------------------
 
